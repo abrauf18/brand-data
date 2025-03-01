@@ -1,6 +1,7 @@
 import BuyBox from "./components/BuyBox";
 import Donut from "./components/Donut";
 import KpiCard from "./components/KpiCard";
+import Retailer from "./components/Retailer";
 import TopSeller from "./components/TopSeller";
 import { Card } from "@tremor/react";
 
@@ -10,6 +11,7 @@ function App() {
       <KpiCard />
       <Card className="w-full space-y-6">
         <Donut />
+        <Retailer/>
         <TopSeller />
         <BuyBox />
       </Card>
