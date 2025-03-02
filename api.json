@@ -1,0 +1,513 @@
+{
+  "data": {
+    "brand": "FitRx11",
+    "topSellers": [
+      {
+        "url": "https://www.walmart.com",
+        "total": 24,
+        "sellerId": "F55CDC31AB754BB68FE0B39041159D63",
+        "sellerName": "Walmart.com",
+        "hasSellerBadge": null,
+        "catalogSellerId": ""
+      },
+      {
+        "url": "https://www.walmart.com/global/seller/101136528",
+        "total": 5,
+        "sellerId": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "sellerName": "Tzumi Electronics",
+        "hasSellerBadge": null,
+        "catalogSellerId": "101136528"
+      },
+      {
+        "url": "https://www.walmart.com/global/seller/102641190",
+        "total": 2,
+        "sellerId": "3C894027EDC34D6EBB7B2AF625129B26",
+        "sellerName": "Loyalty Wholesale",
+        "hasSellerBadge": null,
+        "catalogSellerId": "102641190"
+      },
+      {
+        "url": "https://www.walmart.com/global/seller/277",
+        "total": 2,
+        "sellerId": "90A618580C2D4B5686B93369C8A8C044",
+        "sellerName": "SDG Distribution",
+        "hasSellerBadge": null,
+        "catalogSellerId": "277"
+      },
+      {
+        "url": "https://www.walmart.com/global/seller/102524608",
+        "total": 1,
+        "sellerId": "DDF82B71CB79426DBF98E02E470FC8BC",
+        "sellerName": "Eddie's place",
+        "hasSellerBadge": null,
+        "catalogSellerId": "102524608"
+      }
+    ],
+    "listingCount": {
+      "proSellers": 2,
+      "walmartInStock": 28,
+      "marketplaceSellersFulfilledByWalmart": 11
+    },
+    "viewMoreLinks": {
+      "msfbw": "https://www.walmart.com/search?q=FitRx11&facet=brand%3AFitRx11%7C%7Cfulfillment_method%3AShipping%7C%7Cretailer_type%3AMarketplace+Sellers+fulfilled+by+Walmart&sort=best_seller",
+      "walmart": "https://www.walmart.com/search?q=FitRx11&facet=brand%3AFitRx11%7C%7Cfulfillment_method%3AShipping%7C%7Cretailer_type%3AWalmart&sort=best_seller",
+      "proSellers": "https://www.walmart.com/search?q=FitRx11&facet=brand%3AFitRx11%7C%7Cfulfillment_method%3AShipping%7C%7Cretailer_type%3APro+Sellers&sort=best_seller"
+    },
+    "totalItemCount": 34,
+    "fulfillmentType": {
+      "mfn": 5,
+      "oos": 0,
+      "wfs": 5,
+      "wmt": 24
+    },
+    "itemsbyOfferCount": [
+      {
+        "badges": [],
+        "itemId": "805329294",
+        "BBprice": 23.88,
+        "BBsellerID": "3C894027EDC34D6EBB7B2AF625129B26",
+        "BBsellerName": "Loyalty Wholesale",
+        "BBsellerType": "mfn",
+        "totalOfferCount": 4,
+        "BBcatalogSellerId": 102641190,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "629244918",
+        "BBprice": 23.44,
+        "BBsellerID": "3C894027EDC34D6EBB7B2AF625129B26",
+        "BBsellerName": "Loyalty Wholesale",
+        "BBsellerType": "mfn",
+        "totalOfferCount": 4,
+        "BBcatalogSellerId": 102641190,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "919289766",
+        "BBprice": 74.9,
+        "BBsellerID": "90A618580C2D4B5686B93369C8A8C044",
+        "BBsellerName": "SDG Distribution",
+        "BBsellerType": "mfn",
+        "totalOfferCount": 3,
+        "BBcatalogSellerId": 277,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "692977981",
+        "BBprice": 28.24,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 3,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["50+ bought since yesterday"],
+        "itemId": "138375256",
+        "BBprice": 36.99,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 2,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "3650799807",
+        "BBprice": 49.99,
+        "BBsellerID": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "BBsellerName": "Tzumi Electronics",
+        "BBsellerType": "wfs",
+        "totalOfferCount": 2,
+        "BBcatalogSellerId": 101136528,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "1448220797",
+        "BBprice": 19.99,
+        "BBsellerID": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "BBsellerName": "Tzumi Electronics",
+        "BBsellerType": "wfs",
+        "totalOfferCount": 2,
+        "BBcatalogSellerId": 101136528,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "3013090683",
+        "BBprice": 159.99,
+        "BBsellerID": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "BBsellerName": "Tzumi Electronics",
+        "BBsellerType": "wfs",
+        "totalOfferCount": 2,
+        "BBcatalogSellerId": 101136528,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "1612521489",
+        "BBprice": 281,
+        "BBsellerID": "DDF82B71CB79426DBF98E02E470FC8BC",
+        "BBsellerName": "Eddie's place",
+        "BBsellerType": "mfn",
+        "totalOfferCount": 2,
+        "BBcatalogSellerId": 102524608,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["In 200+ people's carts"],
+        "itemId": "2311649931",
+        "BBprice": 39.87,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["In 100+ people's carts"],
+        "itemId": "5378440837",
+        "BBprice": 19.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["Popular pick"],
+        "itemId": "821289612",
+        "BBprice": 27.98,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["Best seller"],
+        "itemId": "5329046846",
+        "BBprice": 19.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["Best seller"],
+        "itemId": "5373842152",
+        "BBprice": 41.16,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5326338902",
+        "BBprice": 59.65,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["Best seller"],
+        "itemId": "337484095",
+        "BBprice": 39.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "574752300",
+        "BBprice": 97.98,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["100+ bought since yesterday"],
+        "itemId": "788425647",
+        "BBprice": 98,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5326338097",
+        "BBprice": 49.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5321177028",
+        "BBprice": 19.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": ["Rollback"],
+        "itemId": "5933157378",
+        "BBprice": 34.99,
+        "BBsellerID": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "BBsellerName": "Tzumi Electronics",
+        "BBsellerType": "wfs",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 101136528,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5373842151",
+        "BBprice": 58,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5326338903",
+        "BBprice": 60,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "5514107848",
+        "BBprice": 14.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "505146401",
+        "BBprice": 98,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "3425985276",
+        "BBprice": 89,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "7266469664",
+        "BBprice": 148.99,
+        "BBsellerID": "D9FA55EEFACE49A98FFA4D9EBB70F172",
+        "BBsellerName": "Tzumi Electronics",
+        "BBsellerType": "wfs",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 101136528,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "3289812794",
+        "BBprice": 14.88,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "3130235631",
+        "BBprice": 18,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "846470737",
+        "BBprice": 29.39,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "510278062",
+        "BBprice": 21.49,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "2665885028",
+        "BBprice": 64.97,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "406245111",
+        "BBprice": 16.74,
+        "BBsellerID": "F55CDC31AB754BB68FE0B39041159D63",
+        "BBsellerName": "Walmart.com",
+        "BBsellerType": "wmt",
+        "totalOfferCount": 1,
+        "BBcatalogSellerId": 0,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "In stock"
+      },
+      {
+        "badges": [],
+        "itemId": "13028215723",
+        "BBprice": 48,
+        "BBsellerID": "90A618580C2D4B5686B93369C8A8C044",
+        "BBsellerName": "SDG Distribution",
+        "BBsellerType": "mfn",
+        "totalOfferCount": 0,
+        "BBcatalogSellerId": 277,
+        "buyBoxSuppression": false,
+        "availabilityStatusV2": "Out of stock"
+      }
+    ],
+    "listingCountPercent": {
+      "proSellers": "5.9",
+      "walmartInStock": "82.4",
+      "marketplaceSellersFulfilledByWalmart": "32.4"
+    },
+    "fulfillmentTypePercent": {
+      "mfn": "14.7",
+      "oos": "0.0",
+      "wfs": "14.7",
+      "wmt": "70.6"
+    }
+  },
+  "ipMetrics": {
+    "overallScore": {
+      "bars": 3,
+      "text": "Low Risk",
+      "color": "green",
+      "score": 125
+    },
+    "brandOnListing": {
+      "bars": 3,
+      "text": "Brand on Listing - No Match",
+      "color": "green",
+      "matchedSellers": []
+    },
+    "offersOnListing": {
+      "bars": 2,
+      "text": "Medium offer count observed",
+      "color": "yellow"
+    },
+    "uniqueOffersOnBB": {
+      "bars": 3,
+      "text": "High",
+      "color": "green"
+    }
+  },
+  "s3Key": "test/1740836477331.json",
+  "createdAt": "2025-03-01T13:41:27.545Z",
+  "updatedAt": "2025-03-01T13:41:27.545Z",
+  "id": 7
+}

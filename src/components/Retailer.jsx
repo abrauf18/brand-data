@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 
-const Retailer = () => {
+const Retailer = ({ listingCount }) => {
   const [isOpen, setIsOpen] = useState(true);
+
+  // Use the passed props or fallback to defaults if not provided
+  const marketplaceSellersFulfilledByWalmart = listingCount?.marketplaceSellersFulfilledByWalmart || 0;
+  const proSellers = listingCount?.proSellers || 0;
+  const walmartInStock = listingCount?.walmartInStock || 0;
 
   const toggleSection = () => {
     setIsOpen(!isOpen);
   };
 
+  // Use the data from props
   const retailers = [
-    { name: 'Walmart', count: 2405 },
-    { name: 'Pro Sellers', count: 2826 },
-    { name: 'Marketplace Sellers fulfilled by Walmart', count: 3855 },
+    { name: 'Walmart', count: walmartInStock },
+    { name: 'Pro Sellers', count: proSellers },
+    { name: 'Marketplace Sellers fulfilled by Walmart', count: marketplaceSellersFulfilledByWalmart },
   ];
 
   return (

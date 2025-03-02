@@ -7,14 +7,18 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function KpiCard() {
+export default function KpiCard({ ipMetrics }) {
   const [activeTooltip, setActiveTooltip] = useState(null);
 
+
+  
+ 
   const data = [
     {
       name: "Unique Offers on BuyBox",
-      text: "Medium",
-      value: 2,
+      text: ipMetrics.uniqueOffersOnBB.text,
+      value: ipMetrics.uniqueOffersOnBB.bars,
+      color: ipMetrics.uniqueOffersOnBB.color,
       tooltip: (
         <div className="p-4 text-sm">
           <div className="flex items-center mb-3">
@@ -33,9 +37,10 @@ export default function KpiCard() {
       )
     },
     {
-      name: "Brand on Listings - Match Detected",
-      text: "Dyson, Inc",
-      value: 1,
+      name: "Brand on Listings",
+      text: ipMetrics.brandOnListing.text,
+      value: ipMetrics.brandOnListing.bars,
+      color: ipMetrics.brandOnListing.color,
       tooltip: (
         <div className="p-4 text-sm">
           <div className="flex items-start mb-3">
@@ -64,8 +69,9 @@ export default function KpiCard() {
     },
     {
       name: "Offers on Listings",
-      text: "High offer count observed",
-      value: 3,
+      text: ipMetrics.offersOnListing.text,
+      value: ipMetrics.offersOnListing.bars,
+      color: ipMetrics.offersOnListing.color,
       tooltip: (
         <div className="p-4 text-sm">
           <div className="flex items-center mb-3">
@@ -86,6 +92,16 @@ export default function KpiCard() {
     },
   ];
 
+  const getColorClass = (colorName, isBackground = false) => {
+    const prefix = isBackground ? 'bg-' : 'text-';
+    switch (colorName) {
+      case 'green': return `${prefix}green-600`;
+      case 'yellow': return `${prefix}yellow-500`;
+      case 'orange': return `${prefix}orange-500`;
+      case 'red': return `${prefix}red-600`;
+      default: return `${prefix}gray-500`;
+    }
+  };
 
   const ipRatingTooltip = (
     <div className="p-0">
@@ -143,11 +159,19 @@ export default function KpiCard() {
           <h2 className="text-lg font-semibold">IP Rating</h2>
           <div className="flex items-center gap-3">
             <div className="flex gap-1">
-              <div className="w-1 h-4 bg-green-600 rounded"></div>
-              <div className="w-1 h-4 bg-green-600 rounded"></div>
-              <div className="w-1 h-4 bg-green-600 rounded"></div>
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className={classNames(
+                    "w-1 h-4 rounded",
+                    i <= (ipMetrics.overallScore?.bars || 3) 
+                      ? getColorClass(ipMetrics.overallScore?.color || 'green')
+                      : "bg-gray-300"
+                  )}
+                ></div>
+              ))}
             </div>
-            <span className="text-sm text-gray-500">Low Risk</span>
+            <span className="text-sm text-gray-500">{ipMetrics.overallScore?.text || 'Low Risk'}</span>
           </div>
           <div className='flex flex-col justify-center relative'>
             <div
@@ -169,7 +193,7 @@ export default function KpiCard() {
           </div>
           <div className='flex gap-2'>
             <div className='flex flex-col justify-center'>
-            <h2 className="text-sm md:text-lg font-semibold">Click to Report Brand</h2>
+              <h2 className="text-sm md:text-lg font-semibold">Click to Report Brand</h2>
             </div>
             <h2 className="text-lg font-semibold text-green-600">0</h2>
           </div>
@@ -197,12 +221,12 @@ export default function KpiCard() {
               </dt>
               <div className="relative">
                 <div
-                  onMouseEnter={() => setActiveTooltip(index)}
+                  onMouseEnter={() => setActiveTooltip(`metric-${index}`)}
                   onMouseLeave={() => setActiveTooltip(null)}
                 >
                   <IoInformationCircleOutline className="text-xl hover:cursor-pointer text-gray-500 hover:text-gray-700" />
                 </div>
-                {activeTooltip === index && (
+                {activeTooltip === `metric-${index}` && (
                   <div className="absolute z-10 bg-white shadow-lg rounded-md border border-gray-200 min-w-64 left-6 top-0 whitespace-nowrap">
                     {item.tooltip}
                   </div>
@@ -217,11 +241,7 @@ export default function KpiCard() {
                     className={classNames(
                       "w-1 h-4 rounded",
                       i <= item.value
-                        ? 1 === item.value
-                          ? "bg-red-600"
-                          : 2 === item.value
-                            ? "bg-orange-400"
-                            : "bg-green-600"
+                        ? getColorClass(item.color, true)
                         : "bg-gray-300"
                     )}
                   ></div>
