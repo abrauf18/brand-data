@@ -9,7 +9,6 @@ export default {
   ],
   theme: {
     transparent: "transparent",
-    current: "currentColor",
     extend: {
       colors: {
         tremor: {

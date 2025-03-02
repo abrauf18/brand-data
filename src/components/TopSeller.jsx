@@ -3,34 +3,16 @@ import { BarList } from "@tremor/react";
 
 import { TooltipHero } from "./TooltipHero";
 
-const country = [
-  { name: "United States of America", value: 2422 },
-  { name: "India", value: 1560 },
-  { name: "Germany", value: 680 },
-  { name: "Brazil", value: 580 },
-  { name: "United Kingdom", value: 510 },
-];
-
-const city = [
-  { name: "London", value: 1393 },
-  { name: "New York", value: 1219 },
-  { name: "Mumbai", value: 921 },
-  { name: "Berlin", value: 580 },
-  { name: "San Francisco", value: 492 },
-];
-
-const tabs = [
-  { name: "City", data: city },
-  { name: "Country", data: country },
-];
-
-const valueFormatter = (number) =>
-  `${Intl.NumberFormat("us").format(number).toString()}`;
-
-export default function TopSeller() {
-  // Original tooltip text
+export default function TopSeller({ topSellers }) {
+  if (!topSellers || topSellers.length === 0) {
+    return null;
+  }
+  const topSellersUpdated = topSellers.map((item) => ({
+    name: item.sellerName,
+    value: item.total,
+  }));
   const tooltipContent = (
-    <div className="!text-sm !text-white !font-medium">
+    <div className="!text-sm !text-black !font-medium">
       Data is based on the top 40 best-selling items
     </div>
   );
@@ -38,14 +20,15 @@ export default function TopSeller() {
   return (
     <>
       <div className="!flex !items-center !justify-between !w-full">
-        <div className="!flex !items-center !justify-start !gap-2">
-          <p className="!text-tremor-content-strong">Top Sellers</p>
+        <div className="!flex !items-center !justify-center !gap-2">
+          <p className="!text-tremor-content-strong !text-2xl !font-semibold">
+            Top Sellers
+          </p>
           <TooltipHero content={tooltipContent} />
         </div>
       </div>
-      <div className="!mt-6">
-        {/* For demonstration, we keep using 'country' data */}
-        <BarList data={country} valueFormatter={valueFormatter} />
+      <div className="!mt-6 ">
+        <BarList data={topSellersUpdated} className="bar-list" />
       </div>
     </>
   );

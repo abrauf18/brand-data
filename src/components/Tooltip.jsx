@@ -41,7 +41,7 @@ const Tooltip = React.forwardRef(
               sideOffset={sideOffset}
               align="center"
               className={cx(
-                "!max-w-60 !select-none !rounded-md !px-2.5 !py-1.5 !text-sm !leading-5 !shadow-md !z-50",
+                "!max-w-60 !select-none !rounded-md !px-2.5 !py-1.5 !text-sm !leading-5 !shadow-md !z-[2147483647]",
                 "!text-gray-50 dark:!text-gray-900",
                 "!bg-gray-900 dark:!bg-gray-50",
                 "!will-change-[transform,opacity]",

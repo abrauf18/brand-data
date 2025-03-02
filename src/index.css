@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bar-list {
+  position: relative !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+}
+
+.tremor-BarList-labelWrapper {
+  margin-top: 10px !important;
+}
+
+.tremor-BarList-bar {
+  margin-top: 10px !important;
+}

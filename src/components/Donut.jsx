@@ -54,7 +54,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
   const sellerTypes = {
     "Walmart In-Stock": "Walmart",
     "WFS In-Stock": "Marketplace+Sellers+fulfilled+by+Walmart",
-    "Pro Sellers In-Stock": "Pro+Sellers"
+    "Pro Sellers In-Stock": "Pro+Sellers",
   };
 
   // Generate URL for each seller type
@@ -67,9 +67,9 @@ const Donut = ({ per, total, listingCount, brand }) => {
     {
       id: 1,
       name: "Walmart In-Stock",
-      listings: listingCount.walmartInStock,
+      listings: listingCount?.walmartInStock,
       totalListings: total,
-      percentage: parseFloat(per.walmartInStock),
+      percentage: parseFloat(per?.walmartInStock),
       color: "#3b82f6",
       bgColor: "!bg-blue-50",
       borderColor: "!border-blue-100",
@@ -79,7 +79,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
       name: "WFS In-Stock",
       listings: listingCount.marketplaceSellersFulfilledByWalmart,
       totalListings: total,
-      percentage: parseFloat(per.marketplaceSellersFulfilledByWalmart),
+      percentage: parseFloat(per?.marketplaceSellersFulfilledByWalmart),
       color: "#f97316",
       bgColor: "!bg-orange-50",
       borderColor: "!border-orange-100",
@@ -89,7 +89,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
       name: "Pro Sellers In-Stock",
       listings: listingCount.proSellers,
       totalListings: total,
-      percentage: parseFloat(per.proSellers),
+      percentage: parseFloat(per?.proSellers),
       color: "#eab308",
       bgColor: "!bg-yellow-50",
       borderColor: "!border-yellow-100",
@@ -100,7 +100,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
     <div className="!w-full">
       <h3 className="!text-2xl !font-semibold !mb-6">Brand Listing Data</h3>
 
-      <div className="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-3 !gap-6">
+      <div className="!grid !grid-cols-1 !gap-6">
         {listingData.map((item) => (
           <div
             key={item.id}
@@ -134,9 +134,9 @@ const Donut = ({ per, total, listingCount, brand }) => {
 
             {/* View more section */}
             <div className="!p-4 !bg-white !flex !justify-end">
-              <a 
-                href={generateWalmartUrl(brand, sellerTypes[item.name])} 
-                target="_blank" 
+              <a
+                href={generateWalmartUrl(brand, sellerTypes[item.name])}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="!text-blue-500 !text-sm !font-medium !flex !items-center hover:!text-blue-700 !transition-colors"
               >
