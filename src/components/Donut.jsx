@@ -1,11 +1,6 @@
-import React from "react";
-import { IoInformationCircleOutline } from "react-icons/io5";
+import React, { useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-
-// Import your TooltipHero component
 import { TooltipHero } from "./TooltipHero";
-
-// Enhanced Circular Progress Component
 const CircularProgress = ({ percentage, color }) => {
   const size = 80;
   const strokeWidth = 8;
@@ -45,7 +40,7 @@ const CircularProgress = ({ percentage, color }) => {
   );
 };
 
-export default function BrandListingData() {
+const Donut = ({ per, total, listingCount, brand }) => {
   const tooltipContent = {
     "Walmart In-Stock":
       "Displaying the number of items that have Walmart.com as a seller",
@@ -55,13 +50,26 @@ export default function BrandListingData() {
       "Displaying the number of items that have one or more Pro sellers on the listing",
   };
 
+  // Define seller types for each card
+  const sellerTypes = {
+    "Walmart In-Stock": "Walmart",
+    "WFS In-Stock": "Marketplace+Sellers+fulfilled+by+Walmart",
+    "Pro Sellers In-Stock": "Pro+Sellers"
+  };
+
+  // Generate URL for each seller type
+  const generateWalmartUrl = (brandName, sellerType) => {
+    const encodedBrand = encodeURIComponent(brandName);
+    return `https://www.walmart.com/search?q=${encodedBrand}&facet=brand:${encodedBrand}||retailer_type:${sellerType}&sort=best_seller`;
+  };
+
   const listingData = [
     {
       id: 1,
       name: "Walmart In-Stock",
-      listings: 144,
-      totalListings: 672,
-      percentage: 25,
+      listings: listingCount.walmartInStock,
+      totalListings: total,
+      percentage: parseFloat(per.walmartInStock),
       color: "#3b82f6",
       bgColor: "!bg-blue-50",
       borderColor: "!border-blue-100",
@@ -69,9 +77,9 @@ export default function BrandListingData() {
     {
       id: 2,
       name: "WFS In-Stock",
-      listings: 120,
-      totalListings: 672,
-      percentage: 18,
+      listings: listingCount.marketplaceSellersFulfilledByWalmart,
+      totalListings: total,
+      percentage: parseFloat(per.marketplaceSellersFulfilledByWalmart),
       color: "#f97316",
       bgColor: "!bg-orange-50",
       borderColor: "!border-orange-100",
@@ -79,9 +87,9 @@ export default function BrandListingData() {
     {
       id: 3,
       name: "Pro Sellers In-Stock",
-      listings: 120,
-      totalListings: 672,
-      percentage: 30,
+      listings: listingCount.proSellers,
+      totalListings: total,
+      percentage: parseFloat(per.proSellers),
       color: "#eab308",
       bgColor: "!bg-yellow-50",
       borderColor: "!border-yellow-100",
@@ -126,14 +134,21 @@ export default function BrandListingData() {
 
             {/* View more section */}
             <div className="!p-4 !bg-white !flex !justify-end">
-              <button className="!text-blue-500 !text-sm !font-medium !flex !items-center hover:!text-blue-700 !transition-colors">
+              <a 
+                href={generateWalmartUrl(brand, sellerTypes[item.name])} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="!text-blue-500 !text-sm !font-medium !flex !items-center hover:!text-blue-700 !transition-colors"
+              >
                 View more
                 <FaArrowRightLong className="!mt-1 !ml-2" />
-              </button>
+              </a>
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Donut;

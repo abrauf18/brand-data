@@ -30,7 +30,7 @@ const valueFormatter = (number) =>
 export default function TopSeller() {
   // Original tooltip text
   const tooltipContent = (
-    <div className="!text-sm !text-gray-700 !font-medium">
+    <div className="!text-sm !text-white !font-medium">
       Data is based on the top 40 best-selling items
     </div>
   );

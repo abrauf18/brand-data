@@ -80,7 +80,7 @@ export default function KpiCard({ ipMetrics }) {
             <div className="w-3 h-3 rounded-full bg-red-500 mr-3"></div>
             <span className="font-medium">Red - 2 or fewer sellers</span>
           </div>
-          <div className="mt-1 text-gray-600">
+          <div className="mt-1 text-gray-400">
             Observed on one or more listings
           </div>
         </div>
@@ -90,11 +90,11 @@ export default function KpiCard({ ipMetrics }) {
 
   const ipRatingTooltip = (
     <div className="!p-0">
-      <div className="!bg-gray-50 !p-3 !border-b !border-gray-200 !font-medium !text-gray-800 !rounded-t-md">
+      <div className="!bg-gray-300 !p-3 !border-b !border-gray-200 !font-medium !text-gray-800 !rounded-t-md">
         IP Rating Information
       </div>
       <div className="!p-4">
-        <p className="!text-sm !text-gray-700 !mb-3 !font-medium">
+        <p className="!text-sm !text-white !mb-3 !font-medium">
           Indicates the likelihood of gating or restriction enforcement by this
           brand.
         </p>
