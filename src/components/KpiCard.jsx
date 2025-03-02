@@ -159,12 +159,17 @@ export default function KpiCard({ ipMetrics }) {
   };
 
   return (
-    <div className="!tremor-Card-root !relative !text-left !ring-1 !rounded-tremor-default !p-6 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card   !border-tremor-brand  !w-full !space-y-6">
-      <div className="md:!flex md:!justify-between">
+    <div className="!tremor-Card-root !relative !text-left !ring-1 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card !border-tremor-brand !w-full !space-y-6">
+      <div className="!grid !grid-cols-2">
         {/* IP Rating */}
-        <div className="!flex !items-center !justify-start !gap-3">
-          <h2 className="!text-lg !font-semibold">IP Rating</h2>
-          <div className="!flex !items-center !gap-3">
+        <div className="!items-center !justify-start">
+          <div className="flex gap-x-2">
+            <h2 className="!text-lg !font-semibold">IP Rating</h2>
+            <div className="flex">
+              <TooltipHero content={ipRatingTooltip} />
+            </div>
+          </div>
+          <div className="!-mt-4">
             <div className="!flex !gap-1">
               {[1, 2, 3].map((i) => (
                 <div
@@ -182,17 +187,16 @@ export default function KpiCard({ ipMetrics }) {
               {ipMetrics.overallScore?.text || "Low Risk"}
             </span>
           </div>
-          <TooltipHero content={ipRatingTooltip} />
         </div>
 
         {/* Report Brand */}
-        <div className="!flex !items-center !justify-start !gap-3">
+        <div className="!flex !items-center !justify-end !gap-1 !-mt-6">
           <div className="!flex !flex-col !justify-center !relative">
-            <FaUserLock className="!text-xl hover:!cursor-pointer !text-gray-500 hover:!text-gray-700" />
+            <FaUserLock className="!text-gray-500 hover:!text-gray-700 hover:!cursor-pointer" />
           </div>
           <div className="!flex !gap-2">
             <div className="!flex !flex-col !justify-center">
-              <h2 className="!text-sm md:!text-lg !font-semibold">
+              <h2 className="!text-[13px] !font-semibold">
                 Click to Report Brand
               </h2>
             </div>
@@ -201,8 +205,9 @@ export default function KpiCard({ ipMetrics }) {
           <TooltipHero content={reportBrandTooltip} />
         </div>
       </div>
+      
       {/* Metrics List */}
-      <dl className="!grid !gap-6 !grid-cols-1 sm:!grid-cols-3 !mt-4">
+      <dl className="!grid !gap-6 !grid-cols-1 !mt-4">
         {data.map((item) => (
           <div key={item.name} className="!relative">
             <div className="!flex !items-center">

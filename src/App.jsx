@@ -10,7 +10,7 @@ function App() {
     console.log("th", data.data.listingCount);
   });
   return (
-    <div className="!p-6 !space-y-6 !flex !flex-col !items-center !justify-center !bg-[#EBF4FC]">
+    <div className="!p-2 sm:!p-6 !space-y-6 !flex !flex-col !items-center !justify-center !bg-[#EBF4FC]">
       <KpiCard ipMetrics={data.ipMetrics} />
       <div className="!tremor-Card-root !relative !text-left !ring-1 !space-y-6 !rounded-tremor-default !p-6 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card  !border-tremor-brand  !w-full">
         <Donut />
