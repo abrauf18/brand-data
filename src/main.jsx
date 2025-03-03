@@ -6,7 +6,7 @@ import brandData from "../api.json";
 
 createRoot(document.getElementById("brand-data")).render(
   <StrictMode>
-    <App data={brandData} />
+    <App data={brandData} reports={0} />
   </StrictMode>
 );
 
@@ -16,8 +16,6 @@ createRoot(document.getElementById("brand-data")).render(
 // import App from "./App.jsx";
 
 // function renderBrandData(data) {
-//   console.log("Received data:", data);
-
 //   // 1) Grab the container
 //   const container = document.getElementById("brand-data");
 //   if (!container) {
@@ -29,7 +27,7 @@ createRoot(document.getElementById("brand-data")).render(
 //   const root = createRoot(container);
 //   root.render(
 //     <StrictMode>
-//       <App data={data} />
+//       <App data={data["brandData"]} reports={data["reports"]} />
 //     </StrictMode>
 //   );
 // }

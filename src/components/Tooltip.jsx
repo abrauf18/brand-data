@@ -43,7 +43,7 @@ const Tooltip = React.forwardRef(
               className={cx(
                 "!max-w-60 !select-none !rounded-md !px-2.5 !py-1.5 !text-sm !leading-5 !shadow-md !z-[2147483647]",
                 "!text-black-50 ",
-                "!bg-white",
+                "!bg-gray-50",
                 "!will-change-[transform,opacity]",
                 "!data-[side=bottom]:!animate-slideDownAndFade",
                 "!data-[side=left]:!animate-slideLeftAndFade",

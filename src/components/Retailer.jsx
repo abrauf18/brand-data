@@ -57,18 +57,16 @@ const Retailer = ({ listingCount }) => {
                 <input
                   type="checkbox"
                   id={`retailer-${index}`}
-                  className="!w-5 !h-5 !text-blue-600 !border-gray-300 !rounded focus:!ring-blue-500"
+                  className="!w-5 !h-5 !text-blue-500 !border-gray-300 !rounded focus:!ring-blue-500"
                 />
                 <label
                   htmlFor={`retailer-${index}`}
-                  className="!text-base !font-medium !text-gray-700"
+                  className="!text-sm !font-medium !text-gray-700"
                 >
                   {retailer.name}
                 </label>
               </div>
-              <span className="!text-base !text-gray-600">
-                {retailer.count}
-              </span>
+              <span className="!text-xs !text-gray-500">{retailer.count}</span>
             </div>
           ))}
         </div>

@@ -60,7 +60,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
   // Generate URL for each seller type
   const generateWalmartUrl = (brandName, sellerType) => {
     const encodedBrand = encodeURIComponent(brandName);
-    return `https://www.walmart.com/search?q=${encodedBrand}&facet=brand:${encodedBrand}||retailer_type:${sellerType}&sort=best_seller`;
+    return `https://www.walmart.com/search?q=${encodedBrand}&facet=brand%3A${encodedBrand}%7C%7Cfulfillment_method%3AShipping%7C%7Cretailer_type%3A${sellerType}&sort=best_seller`;
   };
 
   const listingData = [
@@ -98,7 +98,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
 
   return (
     <div className="!w-full">
-      <h3 className="!text-base !font-semibold !mb-6">Brand Listing Data</h3>
+      <h3 className="!text-sm !font-semibold !mb-6">Brand Listing Data</h3>
 
       <div className="!grid !grid-cols-1 !gap-6">
         {listingData.map((item) => (
@@ -115,11 +115,11 @@ const Donut = ({ per, total, listingCount, brand }) => {
                 <div className="!flex !flex-col">
                   <div className=" !font-medium !text-gray-800 !text-center sm:!text-start">
                     {item.listings}{" "}
-                    <span className="!text-gray-600 !font-normal">
+                    <span className="!text-gray-500 !font-normal">
                       /{item.totalListings} Listings
                     </span>
                   </div>
-                  <div className="!text-sm !text-gray-600 !mt-1 !flex !items-center">
+                  <div className="!text-xs !text-gray-500 !mt-1 !flex !items-center">
                     <div className="!flex !flex-col !justify-center !pr-1 ">
                       {item.name}
                     </div>

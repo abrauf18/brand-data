@@ -4,11 +4,11 @@ import KpiCard from "./components/KpiCard";
 import Retailer from "./components/Retailer";
 import TopSeller from "./components/TopSeller";
 import { useEffect } from "react";
-function App({ data }) {
+function App({ data, reports }) {
   return (
-    <div className="!p-2 !space-y-6 !flex !flex-col !items-center !justify-center !bg-[#EBF4FC]">
-      <KpiCard ipMetrics={data?.ipMetrics} />
-      <div className="!tremor-Card-root !relative !text-left !ring-1 !space-y-6 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card  !border-tremor-brand  !w-full">
+    <div className="!p-2 !rounded-md !space-y-6 !flex !flex-col !items-center !justify-center !bg-[#EBF4FC]">
+      <KpiCard ipMetrics={data?.ipMetrics} reports={reports} />
+      <div className="!rounded-md !tremor-Card-root !relative !text-left !ring-1 !space-y-6 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card  !border-tremor-brand  !w-full">
         <Donut
           per={data?.data?.listingCountPercent}
           total={data?.data?.totalItemCount}

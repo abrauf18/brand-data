@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function KpiCard({ ipMetrics }) {
+export default function KpiCard({ ipMetrics, reports }) {
   const data = [
     {
       name: "Unique Offers on BuyBox",
@@ -143,33 +143,34 @@ export default function KpiCard({ ipMetrics }) {
   );
 
   const getColorClass = (colorName, isBackground = false) => {
-    const prefix = isBackground ? "bg-" : "text-";
+    console.log(colorName);
+    const prefix = isBackground ? "!bg-" : "text-";
     switch (colorName) {
       case "green":
-        return `${prefix}green-600`;
+        return `${prefix}green-500`;
       case "yellow":
         return `${prefix}yellow-500`;
       case "orange":
         return `${prefix}orange-500`;
       case "red":
-        return `${prefix}red-600`;
+        return `${prefix}red-500`;
       default:
         return `${prefix}gray-500`;
     }
   };
 
   return (
-    <div className="!tremor-Card-root !relative !text-left !ring-1 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card !border-tremor-brand !w-full !space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="!rounded-md !tremor-Card-root !relative !text-left !ring-1 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card !border-tremor-brand !w-full !space-y-3">
+      <div className="!flex !items-start !justify-between gap-1">
         {/* IP Rating */}
-        <div className="w-2/5 !items-center !justify-start">
-          <div className="flex gap-x-2">
-            <h2 className="!text-base !font-semibold">IP Rating</h2>
-            <div className="flex">
+        <div id="ip-rating-box" className="w-2/5 !items-center !justify-start">
+          <div className="!flex !gap-x-1">
+            <h2 className="!text-sm !font-semibold">IP Rating</h2>
+            <div className="!flex ip-rating-hover">
               <TooltipHero content={ipRatingTooltip} />
             </div>
           </div>
-          <div className="!-mt-4">
+          <div className="!flex !items-center !mt-2 !gap-3">
             <div className="!flex !gap-1">
               {[1, 2, 3].map((i) => (
                 <div
@@ -177,20 +178,23 @@ export default function KpiCard({ ipMetrics }) {
                   className={classNames(
                     "!w-1 !h-4 !rounded",
                     i <= ipMetrics.overallScore?.bars
-                      ? getColorClass(ipMetrics.overallScore?.color || "green")
+                      ? getColorClass(
+                          ipMetrics.overallScore?.color || "green",
+                          true
+                        )
                       : "!bg-gray-300"
                   )}
                 ></div>
               ))}
             </div>
-            <span className="!text-sm !text-gray-500">
+            <span className="!text-xs !text-gray-500">
               {ipMetrics.overallScore?.text || "Low Risk"}
             </span>
           </div>
         </div>
 
         {/* Report Brand */}
-        <div className="!flex !items-center !justify-end !gap-1 !-mt-6">
+        <div className="!flex !items-center !justify-end !gap-1">
           <div className="!flex !gap-2">
             <div className="!flex !flex-col !justify-center">
               <div
@@ -198,23 +202,28 @@ export default function KpiCard({ ipMetrics }) {
                 className="!flex !items-center !gap-1 !cursor-pointer"
               >
                 <FaUserLock className="!text-gray-500 hover:!text-gray-700 hover:!cursor-pointer" />
-                <h2 className="!text-sm !font-semibold whitespace-nowrap">
+                <h2 className="!text-xs !font-semibold whitespace-nowrap">
                   Click to Report Brand
                 </h2>
               </div>
             </div>
-            <h2 className="!text-base !font-semibold !text-green-600">0</h2>
+            <h2
+              id="brand-count"
+              className="!text-sm !font-semibold !text-green-500"
+            >
+              {reports || 0}
+            </h2>
           </div>
           <TooltipHero content={reportBrandTooltip} />
         </div>
       </div>
 
       {/* Metrics List */}
-      <dl className="!grid !gap-6 !grid-cols-1 !mt-4">
-        {data.map((item) => (
+      <dl className="!grid !gap-6 !grid-cols-1">
+        {data?.map((item) => (
           <div key={item.name} className="!relative">
             <div className="!flex !items-center">
-              <dt className="!text-sm !font-medium !text-gray-700 !pr-2">
+              <dt className="!text-sm !font-medium !text-gray-700 !pr-1">
                 {item.name}
               </dt>
               <TooltipHero content={item.tooltip} />

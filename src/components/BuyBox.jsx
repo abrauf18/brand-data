@@ -30,7 +30,6 @@ export default function BuyBox({ fulfillmentTypePercent }) {
   // Calculate total for normalization
   const total = segments.reduce((sum, segment) => sum + segment.percentage, 0);
 
-  // Tooltip content (was originally "Data is based on the top 40 best-selling items")
   const tooltipContent = (
     <div className="!text-sm !text-black !font-medium">
       Data is based on the top 40 best-selling items
@@ -41,7 +40,7 @@ export default function BuyBox({ fulfillmentTypePercent }) {
     <div className="!p-2 !bg-white !rounded-xl !shadow-sm !border !border-gray-100">
       <div className="!flex !items-center !justify-between !mb-6">
         <div className="!flex !items-center !gap-2">
-          <h3 className="!text-base !font-semibold !text-gray-800">
+          <h3 className="!text-sm !font-semibold !text-gray-800">
             BuyBox Composition
           </h3>
           {/* Replace old tooltip with TooltipHero */}
@@ -77,7 +76,7 @@ export default function BuyBox({ fulfillmentTypePercent }) {
                 className="!w-4 !h-4 !rounded-sm"
                 style={{ backgroundColor: segment.color }}
               />
-              <span className="!text-sm !font-medium !text-gray-600">
+              <span className="!text-sm !font-medium !text-gray-500">
                 {segment.name}
               </span>
             </div>
