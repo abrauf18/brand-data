@@ -98,7 +98,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
 
   return (
     <div className="!w-full">
-      <h3 className="!text-2xl !font-semibold !mb-6">Brand Listing Data</h3>
+      <h3 className="!text-lg !font-semibold !mb-6">Brand Listing Data</h3>
 
       <div className="!grid !grid-cols-1 !gap-6">
         {listingData.map((item) => (
@@ -113,14 +113,14 @@ const Donut = ({ per, total, listingCount, brand }) => {
                   color={item.color}
                 />
                 <div className="!flex !flex-col">
-                  <div className="!font-bold !text-lg !text-gray-800">
+                  <div className=" !font-medium !text-gray-800 !text-center sm:!text-start">
                     {item.listings}{" "}
                     <span className="!text-gray-600 !font-normal">
                       /{item.totalListings} Listings
                     </span>
                   </div>
-                  <div className="!text-md !text-gray-600 !mt-1 !flex !items-center">
-                    <div className="!flex !flex-col !justify-center !pr-1">
+                  <div className="!text-sm !text-gray-600 !mt-1 !flex !items-center">
+                    <div className="!flex !flex-col !justify-center !pr-1 ">
                       {item.name}
                     </div>
                     <TooltipHero content={tooltipContent[item.name]} />
@@ -141,7 +141,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
                 className="!text-blue-500 !text-sm !font-medium !flex !items-center hover:!text-blue-700 !transition-colors"
               >
                 View more
-                <FaArrowRightLong className="!mt-1 !ml-2" />
+                <FaArrowRightLong className="!mt-1 !ml-2 hover:!cursor-pointer" />
               </a>
             </div>
           </div>

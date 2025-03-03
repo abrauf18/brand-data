@@ -230,7 +230,7 @@ export default function KpiCard({ ipMetrics }) {
                   ></div>
                 ))}
               </div>
-              <span className="!text-sm !font-medium">{item.text}</span>
+              <span className="!text-sm !font-medium ">{item.text}</span>
             </div>
           </div>
         ))}

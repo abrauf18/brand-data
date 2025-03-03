@@ -1,5 +1,4 @@
 import React from "react";
-import { IoInformationCircleOutline } from "react-icons/io5";
 import { TooltipHero } from "./TooltipHero";
 
 export default function BuyBox({ fulfillmentTypePercent }) {
@@ -39,10 +38,10 @@ export default function BuyBox({ fulfillmentTypePercent }) {
   );
 
   return (
-    <div className="!p-6 !bg-white !rounded-xl !shadow-sm !border !border-gray-100">
+    <div className="!p-2 !bg-white !rounded-xl !shadow-sm !border !border-gray-100">
       <div className="!flex !items-center !justify-between !mb-6">
         <div className="!flex !items-center !gap-2">
-          <h3 className="!text-xl !font-semibold !text-gray-800">
+          <h3 className="!text-lg !font-semibold !text-gray-800">
             BuyBox Composition
           </h3>
           {/* Replace old tooltip with TooltipHero */}
@@ -70,7 +69,7 @@ export default function BuyBox({ fulfillmentTypePercent }) {
       <div className="!grid !grid-cols-4 !gap-4">
         {segments.map((segment, index) => (
           <div key={index} className="!flex !flex-col">
-            <span className="!text-2xl !font-bold !text-gray-800">
+            <span className="!text-sm !font-bold !text-gray-800">
               {segment.percentage.toFixed(1)}%
             </span>
             <div className="!flex !items-center !gap-2 !mt-1">
