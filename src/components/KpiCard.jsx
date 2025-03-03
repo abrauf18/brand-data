@@ -176,7 +176,7 @@ export default function KpiCard({ ipMetrics }) {
                   key={i}
                   className={classNames(
                     "!w-1 !h-4 !rounded",
-                    i <= (ipMetrics.overallScore?.bars || 3)
+                    i <= ipMetrics.overallScore?.bars
                       ? getColorClass(ipMetrics.overallScore?.color || "green")
                       : "!bg-gray-300"
                   )}
