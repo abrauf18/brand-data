@@ -98,7 +98,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
 
   return (
     <div className="!w-full">
-      <h3 className="!text-lg !font-semibold !mb-6">Brand Listing Data</h3>
+      <h3 className="!text-base !font-semibold !mb-6">Brand Listing Data</h3>
 
       <div className="!grid !grid-cols-1 !gap-6">
         {listingData.map((item) => (
@@ -133,7 +133,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
             <div className="!w-full !h-px !bg-gray-200"></div>
 
             {/* View more section */}
-            <div className="!p-4 !bg-white !flex !justify-end">
+            <div className="!p-4 !bg-white !flex !justify-end ">
               <a
                 href={generateWalmartUrl(brand, sellerTypes[item.name])}
                 target="_blank"
@@ -141,7 +141,7 @@ const Donut = ({ per, total, listingCount, brand }) => {
                 className="!text-blue-500 !text-sm !font-medium !flex !items-center hover:!text-blue-700 !transition-colors"
               >
                 View more
-                <FaArrowRightLong className="!mt-1 !ml-2 hover:!cursor-pointer" />
+                <FaArrowRightLong className="!mt-1 !ml-2" />
               </a>
             </div>
           </div>

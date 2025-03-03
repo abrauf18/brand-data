@@ -21,7 +21,7 @@ export default function TopSeller({ topSellers }) {
     <>
       <div className="!flex !items-center !justify-between !w-full">
         <div className="!flex !items-center !justify-center !gap-2">
-          <p className="!text-tremor-content-strong !text-lg !font-semibold">
+          <p className="!text-tremor-content-strong !text-base !font-semibold">
             Top Sellers
           </p>
           <TooltipHero content={tooltipContent} />

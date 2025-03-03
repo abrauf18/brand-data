@@ -41,7 +41,7 @@ export default function BuyBox({ fulfillmentTypePercent }) {
     <div className="!p-2 !bg-white !rounded-xl !shadow-sm !border !border-gray-100">
       <div className="!flex !items-center !justify-between !mb-6">
         <div className="!flex !items-center !gap-2">
-          <h3 className="!text-lg !font-semibold !text-gray-800">
+          <h3 className="!text-base !font-semibold !text-gray-800">
             BuyBox Composition
           </h3>
           {/* Replace old tooltip with TooltipHero */}

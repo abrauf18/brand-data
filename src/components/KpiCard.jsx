@@ -160,11 +160,11 @@ export default function KpiCard({ ipMetrics }) {
 
   return (
     <div className="!tremor-Card-root !relative !text-left !ring-1 !rounded-tremor-default !p-2 !bg-tremor-background !ring-tremor-ring !shadow-tremor-card !border-tremor-brand !w-full !space-y-6">
-      <div className="!grid !grid-cols-2">
+      <div className="flex items-center justify-between">
         {/* IP Rating */}
-        <div className="!items-center !justify-start">
+        <div className="w-2/5 !items-center !justify-start">
           <div className="flex gap-x-2">
-            <h2 className="!text-lg !font-semibold">IP Rating</h2>
+            <h2 className="!text-base !font-semibold">IP Rating</h2>
             <div className="flex">
               <TooltipHero content={ipRatingTooltip} />
             </div>
@@ -191,16 +191,19 @@ export default function KpiCard({ ipMetrics }) {
 
         {/* Report Brand */}
         <div className="!flex !items-center !justify-end !gap-1 !-mt-6">
-          <div className="!flex !flex-col !justify-center !relative">
-            <FaUserLock className="!text-gray-500 hover:!text-gray-700 hover:!cursor-pointer" />
-          </div>
           <div className="!flex !gap-2">
             <div className="!flex !flex-col !justify-center">
-              <h2 className="!text-[13px] !font-semibold">
-                Click to Report Brand
-              </h2>
+              <div
+                id="brand-report"
+                className="!flex !items-center !gap-1 !cursor-pointer"
+              >
+                <FaUserLock className="!text-gray-500 hover:!text-gray-700 hover:!cursor-pointer" />
+                <h2 className="!text-sm !font-semibold whitespace-nowrap">
+                  Click to Report Brand
+                </h2>
+              </div>
             </div>
-            <h2 className="!text-lg !font-semibold !text-green-600">0</h2>
+            <h2 className="!text-base !font-semibold !text-green-600">0</h2>
           </div>
           <TooltipHero content={reportBrandTooltip} />
         </div>

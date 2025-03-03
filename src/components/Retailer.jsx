@@ -61,12 +61,14 @@ const Retailer = ({ listingCount }) => {
                 />
                 <label
                   htmlFor={`retailer-${index}`}
-                  className="!text-lg !font-medium !text-gray-700"
+                  className="!text-base !font-medium !text-gray-700"
                 >
                   {retailer.name}
                 </label>
               </div>
-              <span className="!text-lg !text-gray-600">{retailer.count}</span>
+              <span className="!text-base !text-gray-600">
+                {retailer.count}
+              </span>
             </div>
           ))}
         </div>
