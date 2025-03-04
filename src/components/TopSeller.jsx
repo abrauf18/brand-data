@@ -11,6 +11,7 @@ export default function TopSeller({ topSellers }) {
     .map((item) => ({
       name: item.sellerName,
       value: item.total,
+      catalogSellerId: item.catalogSellerId,
     }))
     .slice(0, 5);
 
@@ -19,6 +20,17 @@ export default function TopSeller({ topSellers }) {
       Data is based on the top 40 best-selling items
     </div>
   );
+
+  const handleBarClick = (item) => {
+    console.log(item.name);
+    if (item.name == "Walmart.com") {
+      return window.open(`https://www.walmart.com`, "_blank");
+    }
+    return window.open(
+      `https://www.walmart.com/global/seller/${item.catalogSellerId}`,
+      "_blank"
+    );
+  };
 
   return (
     <>
@@ -31,7 +43,11 @@ export default function TopSeller({ topSellers }) {
         </div>
       </div>
       <div className="!mt-6 ">
-        <BarList data={topSellersUpdated} className="bar-list" />
+        <BarList
+          data={topSellersUpdated}
+          className="bar-list"
+          onValueChange={(item) => handleBarClick(item)}
+        />
       </div>
     </>
   );
